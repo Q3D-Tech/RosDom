@@ -1,0 +1,19 @@
+[Unit]
+Description=RosDom Backend API
+After=network.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=rosdom
+Group=rosdom
+WorkingDirectory=/var/opt/rosdom/backend
+EnvironmentFile=/etc/rosdom/rosdom-backend.env
+ExecStart=/usr/bin/node /var/opt/rosdom/backend/dist/main.js
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/rosdom/backend.log
+StandardError=append:/var/log/rosdom/backend.error.log
+
+[Install]
+WantedBy=multi-user.target

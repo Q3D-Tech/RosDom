@@ -1,0 +1,437 @@
+:root {
+  --bg: #0c1018;
+  --panel: rgba(20, 24, 35, 0.9);
+  --panel-strong: rgba(29, 35, 50, 0.94);
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #f7f8fb;
+  --muted: #9fa8bd;
+  --mint: #79f2c6;
+  --amber: #f6c66c;
+  --coral: #ff7a82;
+  --purple: #7c3aed;
+  --magenta: #d946ef;
+  --rose: #f5b6da;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(124, 58, 237, 0.25), transparent 25%),
+    radial-gradient(circle at 85% 15%, rgba(217, 70, 239, 0.2), transparent 30%),
+    linear-gradient(180deg, #121825 0%, #0b1017 100%);
+  color: var(--text);
+  font-family: "Segoe UI", "SF Pro Display", "Manrope", sans-serif;
+}
+
+.board {
+  width: 1600px;
+  min-height: 2300px;
+  margin: 0 auto;
+  padding: 56px 56px 76px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.hero-card,
+.note-card,
+.phone,
+.spec-card {
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  position: relative;
+  padding: 42px 42px 46px;
+  overflow: hidden;
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(124, 58, 237, 0.92) 0%, rgba(190, 71, 237, 0.88) 48%, rgba(241, 171, 205, 0.82) 100%);
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -10px;
+  width: 360px;
+  height: 360px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.05));
+  clip-path: polygon(42% 0%, 100% 0%, 100% 78%, 78% 78%, 78% 100%, 42% 100%, 42% 58%, 0% 58%);
+  opacity: 0.9;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 68%;
+}
+
+.eyebrow {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(10, 11, 18, 0.18);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  margin: 18px 0 8px;
+  font-size: 68px;
+  line-height: 0.95;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  margin: 0;
+  max-width: 560px;
+  font-size: 22px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-pills,
+.quick-row,
+.chip-row,
+.toolbar-row,
+.filter-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-pills {
+  position: relative;
+  z-index: 1;
+  margin-top: 34px;
+}
+
+.pill {
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(11, 16, 24, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.note-card {
+  padding: 28px 30px;
+  background: rgba(15, 18, 27, 0.88);
+}
+
+.note-card h2 {
+  margin: 0 0 14px;
+  font-size: 28px;
+}
+
+.note-card p,
+.spec-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 34px;
+}
+
+.phone {
+  padding: 14px;
+  background: linear-gradient(180deg, rgba(31, 38, 53, 0.98), rgba(16, 22, 32, 0.98));
+}
+
+.phone-frame {
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 760px;
+  background:
+    linear-gradient(180deg, rgba(20, 26, 38, 0.98), rgba(10, 13, 20, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.screen {
+  padding: 18px 18px 30px;
+}
+
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.screen-header .title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.screen-header .caption {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.badge {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.device-grid,
+.metrics-grid,
+.card-grid,
+.room-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.device-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metrics-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.room-grid {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.card,
+.device-tile,
+.metric,
+.list-item,
+.editor-panel,
+.hero-mini {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 16px;
+}
+
+.hero-mini {
+  padding: 18px;
+  background:
+    linear-gradient(135deg, rgba(124, 58, 237, 0.75), rgba(217, 70, 239, 0.72) 60%, rgba(245, 182, 218, 0.5));
+}
+
+.hero-mini h3,
+.card h3,
+.editor-panel h3,
+.spec-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.hero-mini p,
+.card p,
+.device-tile p,
+.list-item p,
+.metric p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.device-tile strong,
+.list-item strong,
+.metric strong,
+.card strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.device-tile.online {
+  background: linear-gradient(180deg, rgba(121, 242, 198, 0.18), rgba(255, 255, 255, 0.05));
+}
+
+.device-tile.alert {
+  background: linear-gradient(180deg, rgba(255, 122, 130, 0.16), rgba(255, 255, 255, 0.04));
+}
+
+.metric strong {
+  font-size: 24px;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.section-title {
+  margin: 18px 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.rail {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 18px;
+  padding: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.rail span {
+  padding: 10px 12px;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.rail span.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.canvas {
+  position: relative;
+  height: 280px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(15, 18, 27, 0.98), rgba(12, 15, 22, 0.98)),
+    repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(255,255,255,0.03) 35px, rgba(255,255,255,0.03) 36px),
+    repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(255,255,255,0.03) 35px, rgba(255,255,255,0.03) 36px);
+  overflow: hidden;
+}
+
+.room-shape,
+.marker,
+.ghost {
+  position: absolute;
+  border-radius: 20px;
+}
+
+.room-shape {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.room-shape.selected {
+  box-shadow: 0 0 0 2px rgba(121, 242, 198, 0.55);
+}
+
+.marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(245, 182, 218, 0.95), rgba(217, 70, 239, 0.95));
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.marker.task {
+  background: linear-gradient(180deg, rgba(246, 198, 108, 0.95), rgba(255, 122, 130, 0.95));
+}
+
+.ghost {
+  border: 2px dashed rgba(121, 242, 198, 0.8);
+  background: rgba(121, 242, 198, 0.12);
+}
+
+.editor-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 12px;
+}
+
+.toolbar-chip {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 13px;
+}
+
+.toolbar-chip.active {
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.65), rgba(217, 70, 239, 0.45));
+  color: white;
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.spec-card {
+  padding: 24px;
+}
+
+.spec-card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.family-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.family-chip {
+  border-radius: 20px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tiny {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.big {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.divider {
+  height: 1px;
+  margin: 14px 0;
+  background: rgba(255, 255, 255, 0.08);
+}

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>RosDom Concept — Family Guardian</title>
+    <link rel="stylesheet" href="boards.css" />
+  </head>
+  <body>
+    <main class="board">
+      <section class="hero">
+        <div class="hero-card">
+          <div class="hero-content">
+            <div class="eyebrow">Family Guardian</div>
+            <h1 class="hero-title">Мой дом.<br />Моя семья.<br />Мой контроль.</h1>
+            <p class="hero-subtitle">
+              Основной концепт РосДом: smart-home shell с сильным семейным контекстом,
+              детским режимом, безопасностью, этажами и редактором как частью одной системы.
+            </p>
+          </div>
+          <div class="hero-pills">
+            <span class="pill">Family-aware dashboard</span>
+            <span class="pill">Этажи и редактор inside shell</span>
+            <span class="pill">Детский и пожилой режим как first-class UX</span>
+          </div>
+        </div>
+        <div class="note-card">
+          <h2>Почему это главный вариант</h2>
+          <p>
+            Он удерживает баланс между домом, устройствами, безопасностью и семейными сценариями:
+            задачи ребёнка, разрешённые устройства, тревоги, статусы дома и этажей воспринимаются как одна экосистема.
+          </p>
+        </div>
+      </section>
+
+      <section class="board-grid">
+        <article class="phone">
+          <div class="phone-frame screen">
+            <div class="screen-header">
+              <div>
+                <div class="caption">Adult Home</div>
+                <div class="title">Мой дом</div>
+              </div>
+              <span class="badge">2 этаж активен</span>
+            </div>
+            <div class="hero-mini">
+              <h3>Я дома</h3>
+              <p>Охрана снята • 12 устройств онлайн • 2 семейных события сегодня</p>
+            </div>
+            <div class="metrics-grid" style="margin-top:14px;">
+              <div class="metric"><strong>12</strong><p>устройств онлайн</p></div>
+              <div class="metric"><strong>3</strong><p>комнаты активны</p></div>
+              <div class="metric"><strong>2</strong><p>задачи детей</p></div>
+            </div>
+            <div class="section-title">Семья</div>
+            <div class="family-row">
+              <div class="family-chip"><strong>Антон</strong><p class="tiny">взрослый • дома</p></div>
+              <div class="family-chip"><strong>Дима</strong><p class="tiny">ребёнок • задание активно</p></div>
+              <div class="family-chip"><strong>Бабушка</strong><p class="tiny">пожилой режим</p></div>
+            </div>
+            <div class="section-title">Избранные устройства</div>
+            <div class="device-grid">
+              <div class="device-tile online"><strong>Люстра</strong><p>Гостиная • 72%</p></div>
+              <div class="device-tile"><strong>Термостат</strong><p>Спальня • 23°C</p></div>
+              <div class="device-tile alert"><strong>Камера входа</strong><p>1 новое событие</p></div>
+              <div class="device-tile"><strong>Шторы</strong><p>Детская • 30%</p></div>
+            </div>
+            <div class="rail">
+              <span class="active">Главная</span><span>Комнаты</span><span>Устройства</span><span>Охрана</span><span>Профиль</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="phone">
+          <div class="phone-frame screen">
+            <div class="screen-header">
+              <div>
+                <div class="caption">Комнаты / Редактор</div>
+                <div class="title">2 этаж</div>
+              </div>
+              <span class="badge">Inline validation</span>
+            </div>
+            <div class="quick-row">
+              <span class="toolbar-chip">1 этаж</span>
+              <span class="toolbar-chip active">2 этаж</span>
+              <span class="toolbar-chip">Мансарда</span>
+            </div>
+            <div class="editor-layout" style="margin-top:14px;">
+              <div>
+                <div class="toolbar-row" style="margin-bottom:10px;">
+                  <span class="toolbar-chip active">Выбор</span>
+                  <span class="toolbar-chip">Комната</span>
+                  <span class="toolbar-chip">Блок</span>
+                  <span class="toolbar-chip">Мебель</span>
+                  <span class="toolbar-chip">Задача</span>
+                </div>
+                <div class="canvas">
+                  <div class="room-shape selected" style="left:18px;top:20px;width:142px;height:98px;"></div>
+                  <div class="room-shape" style="left:174px;top:22px;width:126px;height:78px;"></div>
+                  <div class="room-shape" style="left:142px;top:136px;width:146px;height:108px;"></div>
+                  <div class="marker" style="left:76px;top:58px;"></div>
+                  <div class="marker task" style="left:198px;top:82px;"></div>
+                  <div class="ghost" style="left:138px;top:50px;width:120px;height:90px;"></div>
+                </div>
+              </div>
+              <div class="editor-panel">
+                <h3>Гостиная</h3>
+                <p>Площадь 24 м² • 4 устройства • 1 задача</p>
+                <div class="divider"></div>
+                <div class="tiny">Ошибка</div>
+                <p>Новый блок пересекается с кухней. Исправьте форму или переместите блок, не выходя из редактора.</p>
+                <div class="divider"></div>
+                <div class="tiny">Действия</div>
+                <div class="quick-row" style="margin-top:10px;">
+                  <span class="toolbar-chip">Undo</span>
+                  <span class="toolbar-chip">Redo</span>
+                  <span class="toolbar-chip active">Save</span>
+                </div>
+              </div>
+            </div>
+            <div class="rail">
+              <span>Главная</span><span class="active">Комнаты</span><span>Устройства</span><span>Охрана</span><span>Профиль</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="phone">
+          <div class="phone-frame screen">
+            <div class="screen-header">
+              <div>
+                <div class="caption">Child Mode</div>
+                <div class="title">Мои задания</div>
+              </div>
+              <span class="badge">500 ₽</span>
+            </div>
+            <div class="card">
+              <strong>Уборка в кухне</strong>
+              <p>Подмести у раковины • награда 500 ₽ • метка на плане необязательна</p>
+            </div>
+            <div class="canvas" style="height:180px;margin-top:14px;">
+              <div class="room-shape" style="left:12px;top:18px;width:150px;height:82px;"></div>
+              <div class="room-shape" style="left:176px;top:18px;width:124px;height:82px;"></div>
+              <div class="marker task" style="left:228px;top:58px;"></div>
+            </div>
+            <div class="section-title">Разрешённые устройства</div>
+            <div class="device-grid">
+              <div class="device-tile online"><strong>Ночник</strong><p>Детская</p></div>
+              <div class="device-tile"><strong>Шторы</strong><p>Детская</p></div>
+            </div>
+            <div class="section-title">Награды</div>
+            <div class="list">
+              <div class="list-item"><strong>Баланс</strong><p class="big">500 ₽</p></div>
+            </div>
+            <div class="rail">
+              <span>Главная</span><span>Комнаты</span><span class="active">Задания</span><span>Награды</span><span>Профиль</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="specs">
+        <div class="spec-card">
+          <h3>Что переносим в код</h3>
+          <ul>
+            <li>Hero-карта “Мой дом / Я дома” как главный визуальный центр</li>
+            <li>Плавающий smart-rail и верхний home header</li>
+            <li>Сильный family-block на главной</li>
+            <li>Этажи и editor внутри общего shell</li>
+          </ul>
+        </div>
+        <div class="spec-card">
+          <h3>Функциональный каркас</h3>
+          <ul>
+            <li>Floors + preferences + favorite devices</li>
+            <li>Role-aware Home для adult / child / elderly</li>
+            <li>Inline validation в редакторе вместо блокирующего overlay</li>
+            <li>Guided add-device и family-aware security</li>
+          </ul>
+        </div>
+        <div class="spec-card">
+          <h3>Вердикт</h3>
+          <p>Это выбранный главный концепт для redesign и дальнейшей реализации в Android-коде и backend-контрактах.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
